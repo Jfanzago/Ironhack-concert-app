@@ -1,2 +1,13 @@
 <h1>Concerts#index</h1>
 <p>Find me in app/views/concerts/index.html.erb</p>
+
+<% @concert.each do |concert| %> 
+
+  <p><%= concert.name %></p> 
+  <p><%= concert.venue %></p> 
+  <p><%= concert.price %></p> 
+  <p><%= concert.city %></p> 
+  <p><%= concert.description %></p> 
+  <p><%= concert.date %></p> 
+
+<% end %>

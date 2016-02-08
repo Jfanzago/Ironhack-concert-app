@@ -1,2 +1,24 @@
 <h1>Concerts#new</h1>
 <p>Find me in app/views/concerts/new.html.erb</p>
+
+<%= form_for @concert do | f |  %>
+	<%= f.label :date %><br>
+	<%= f.datetime_select :date, :ampm => true, :start_minute => [0,15,30,45] %><br>	
+	
+	<%= f.label :name %><br>
+	<%= f.text_field :name%><br>
+
+	<%= f.label :price %><br>
+	<%= f.text_field :price  %>
+	<br>
+	<%= f.label :venue %><br>
+	<%= f.text_field :venue  %>
+	<br>
+	<%= f.label :city %><br>
+	<%= f.text_field :city  %>
+	<br>
+	<%= f.label :description %><br>
+	<%= f.text_area :description  %>
+	<br>
+	<%= f.submit %>
+<% end %>
